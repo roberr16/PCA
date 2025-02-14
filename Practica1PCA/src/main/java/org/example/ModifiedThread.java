@@ -2,6 +2,8 @@ package org.example;
 
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 
 public class ModifiedThread extends Thread {
     private String nombre;
@@ -15,23 +17,13 @@ public class ModifiedThread extends Thread {
     @Override
     public void run() {
         System.out.println("Hilo " + nombre + " está ejecutándose.");
-        try {
-            // Simula alguna tarea del hilo
-            Thread.sleep(1000); // Pausa de 1 segundo
-        } catch (InterruptedException e) {
-            System.out.println("Hilo " + nombre + " fue interrumpido.");
-        }
+        Collections.sort(lista);
         System.out.println("Hilo " + nombre + " ha terminado.");
     }
 
-
-
-
-
-
-
-
-
+    public ArrayList<Integer> getLista() {
+        return lista;
+    }
 }
 
 

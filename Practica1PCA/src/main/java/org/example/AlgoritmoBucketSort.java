@@ -32,7 +32,11 @@ public class AlgoritmoBucketSort implements TesterRun{
                 throw new RuntimeException(e);
             }
         }
-        return null ;
+        for (ModifiedThread hilo : hilos) {
+            solucion.addAll(hilo.getLista());
+        }
+
+        return solucion;
     }
 
     public int seleccionarBucket (int num_threads, int num){
