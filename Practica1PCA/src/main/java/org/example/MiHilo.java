@@ -51,5 +51,5 @@ public class MiHilo extends Thread {
 
         System.out.println("Todos los hilos han terminado.");
     }
-    publi
+
 }
