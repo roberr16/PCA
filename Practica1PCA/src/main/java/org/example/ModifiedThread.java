@@ -6,23 +6,23 @@ import java.util.Collections;
 import java.util.Comparator;
 
 public class ModifiedThread extends Thread {
-    private String nombre;
-    private ArrayList<Integer> lista;
+    private String name;
+    private ArrayList<Integer> list;
 
-    public ModifiedThread(String nombre, ArrayList<Integer> lista ) throws InterruptedException {
-        this.nombre = nombre;
-        this.lista = lista;
+    public ModifiedThread(String name, ArrayList<Integer> list ){
+        this.name = name;
+        this.list = list;
     }
 
     @Override
     public void run() {
-        System.out.println("Hilo " + nombre + " está ejecutándose.");
-        Collections.sort(lista);
-        System.out.println("Hilo " + nombre + " ha terminado.");
+        System.out.println("Hilo " + name + " está ejecutándose.");
+        Collections.sort(list);
+        System.out.println("Hilo " + name + " ha terminado.");
     }
 
-    public ArrayList<Integer> getLista() {
-        return lista;
+    public ArrayList<Integer> getList() {
+        return list;
     }
 }
 
