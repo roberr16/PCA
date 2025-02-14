@@ -24,12 +24,10 @@ public class AlgoritmoBucketSort implements TesterRun{
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
-
-        for (Thread hilo : hilos) {
-            hilo.start();
-        }
+        
         for (Thread hilo : hilos) {
             try {
+                hilo.start();
                 hilo.join();
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
