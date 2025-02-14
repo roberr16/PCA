@@ -17,7 +17,7 @@ public class AlgoritmoBucketSort implements TesterRun{
 
         ArrayList<ModifiedThread> hilos = null;
         try {
-            hilos = crearHilos(num_threads);
+            hilos = crearHilos(num_threads, buckets);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
@@ -42,10 +42,10 @@ public class AlgoritmoBucketSort implements TesterRun{
 
     }
 
-    public ArrayList<ModifiedThread> crearHilos (int num_threads) throws InterruptedException {
+    public ArrayList<ModifiedThread> crearHilos (int num_threads, ArrayList<ArrayList<Integer>> buckets  ) throws InterruptedException {
         ArrayList<ModifiedThread> hilos = new ArrayList<>();
         for (int i = 1; i <= num_threads; i++) {
-            ModifiedThread hilo = new ModifiedThread("Hilo " + i);
+            ModifiedThread hilo = new ModifiedThread("Hilo" + i, buckets.get(i));
             hilos.add(hilo);
         }
         return hilos;

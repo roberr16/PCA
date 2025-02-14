@@ -1,11 +1,15 @@
 package org.example;
 
 
+import java.util.ArrayList;
+
 public class ModifiedThread extends Thread {
     private String nombre;
+    private ArrayList<Integer> lista;
 
-    public ModifiedThread(String nombre) throws InterruptedException {
+    public ModifiedThread(String nombre, ArrayList<Integer> lista ) throws InterruptedException {
         this.nombre = nombre;
+        this.lista = lista;
     }
 
     @Override
