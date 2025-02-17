@@ -31,14 +31,17 @@ public class AlgoritmoBucketSort implements TesterRun{
         }
 
         //Inicio y sincronizacion de los hilos
-        for (Thread hilo : hilos) {
+        for(ModifiedThread hilo : hilos) {
+            hilo.start();
+        }
+        for (ModifiedThread hilo : hilos) {
             try {
-                hilo.start();
                 hilo.join();
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
         }
+
 
         //Relleno de ArrayList solucion con todos los subs ArrayList de los hilos
         for (ModifiedThread hilo : hilos) {
