@@ -66,10 +66,8 @@ public class AlgoritmoBucketSort implements TesterRun{
         long min = Integer.MIN_VALUE;
         float tamanoIntervalo = (float) rango / num_threads;
 
-        if(num == Integer.MAX_VALUE){
-            return num_threads;
-        }
-        return (int) ((num - min)/tamanoIntervalo);
+        int index = (int) ((num - min) / tamanoIntervalo);
+        return Math.min(index, num_threads - 1);
     }
 
     /**
