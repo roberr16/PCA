@@ -34,6 +34,9 @@ public class Semaforo3 {
             } else if (nombreHilo.equals("Hilo 2")) {
                 //COMPLETAR EL CÓDIGO
                 //desbloquear
+            }else if (nombreHilo.equals("Hilo 3")) {
+                //COMPLETAR EL CÓDIGO
+                //desbloquear
             }
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();

@@ -3,6 +3,7 @@ package org.example;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.concurrent.Semaphore;
+import java.util.function.Consumer;
 
 public class ProductorConsumidor {
     private static final int TAM_BUFFER = 5;
@@ -19,6 +20,7 @@ public class ProductorConsumidor {
         Thread productor2 = new Thread(new Productor(), "Productor 2");
         //COMPLETAR EL CÓDIGO
         // Crear y ejecutar "Consumidor1" y "Consumidor2"
+
 
         productor1.start();
         productor2.start();

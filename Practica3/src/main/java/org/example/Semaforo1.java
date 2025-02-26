@@ -1,4 +1,4 @@
-package P3;
+package org.example;
 
 import java.util.concurrent.Semaphore;
 
