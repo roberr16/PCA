@@ -25,8 +25,11 @@ public class Semaforo2 {
 
         Thread hilo1 = new Thread(tarea, "Hilo 1");
         Thread hilo2 = new Thread(tarea, "Hilo 2");
-        //COMPLETAR EL CÓDIGO
-        //lanzar los hilos
+        Thread hilo3 = new Thread(tarea, "Hilo 3");
+
+        hilo1.start();
+        hilo2.start();
+        hilo3.start();
     }
 }
 
