@@ -54,7 +54,7 @@ public class ProductorConsumidor {
         @Override
         public void run() {
             try {
-                while (true) {
+                for (int i = 0; i < 10; i++) {
                     elementosDisponibles.acquire(); //Espera a que haya elementos disponible para consumir
                     mutex.acquire();//Espera el acceso exclusivo
                     int item = buffer.remove();//Saca el elemento de la lista
