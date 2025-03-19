@@ -3,7 +3,7 @@ package org.example;
 import java.util.concurrent.Semaphore;
 
 public class Semaforo1 {
-    private final Semaphore semaforo = new Semaphore(0);
+    private final Semaphore semaforo = new Semaphore(2);
 
     public void ejecutarHilos() {
         Thread hilo1 = new Thread(() -> {

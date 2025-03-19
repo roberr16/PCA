@@ -4,8 +4,8 @@ import java.util.concurrent.Semaphore;
 
 public class Semaforo3 {
 
-    private final Semaphore semaforo1 = new Semaphore(1); // Bloquea el hilo 1
-    private final Semaphore semaforo2 = new Semaphore(0); // Bloquea el hilo 2
+    private final Semaphore semaforo1 = new Semaphore(0); // Bloquea el hilo 1
+    private final Semaphore semaforo2 = new Semaphore(1); // Bloquea el hilo 2
     private final Semaphore semaforo3 = new Semaphore(0); // Bloquea el hilo 3
 
     private final Runnable tarea = () -> {
@@ -17,7 +17,7 @@ public class Semaforo3 {
             } else if (nombreHilo.equals("Hilo 2")) {
                 semaforo2.acquire();
             } else if (nombreHilo.equals("Hilo 3")) {
-                semaforo3.acquire();
+                semaforo1.acquire();
             }
 
             System.out.println(nombreHilo + " iniciando...");
