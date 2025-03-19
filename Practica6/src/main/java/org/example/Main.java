@@ -1,4 +1,4 @@
-import practica_p5p6.*;
+import org.example.practica_p5p6.*;
 
 import java.util.ArrayList;
 import java.util.Collections;
